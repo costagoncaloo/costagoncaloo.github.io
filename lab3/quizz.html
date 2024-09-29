@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<htlm lang=""pt">
+    <head>
+        <meta charset="UTF-8">
+        <title>Atlanta</title>
+
+    </head>
+    <body>
+        <header>
+            <h1>A minha cidade</h1>
+
+        </header>
+       
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="local.html">Localização</a>
+            <a href="multimedia.html">Multimédia</a>
+            <a href="info.html">Informação</a>
+            <a href="quizz.html">Quizz</a>
+            <a href="viagem.html">Viagem</a>
+        </nav>
+
+        <p> <a href="images/Atlanta.jpg"></a></p>
+
+        
+        <main>
+            
+            <h2>Quizz</h2>
+            
+            <form method="get" action="https://postman-echo.com/get">
+           
+                <fieldset>
+               
+                    <legend>Dados Pessoais</legend>
+              
+                    <label for="nome">Nome:</label>               
+                    <input type="text" id="nome" name="nome" placeholder="Insira seu nome" autocomplete="on" required><br><br>
+               
+                    <label for="apelido">Apelido:</label>              
+                    <input type="text" id="apelido" name="apelido" placeholder="Insira seu apelido" maxlength="50"><br><br>
+               
+                    <label for="email">Email:</label>               
+                    <input type="email" id="email" name="email" placeholder="exemplo@email.com" required><br><br>
+           
+                </fieldset>
+          
+                <fieldset>
+               
+                    <legend>Quizz sobre Atlanta</legend>
+               
+                    <label for="monumento">Qual o monumento mais famoso de Atlanta?</label>               
+                    <input type="text" id="monumento" name="monumento" placeholder="Ex: Martin Luther King Jr. National Historic Site" size="50" required><br><br>
+              
+                    <label for="cor">Qual a cor que representa a cidade de Atlanta?</label>              
+                    <input type="color" id="cor" name="cor" value="#FF0000"><br><br>
+        
+                    <label for="atracao">Qual é a sua atração favorita em Atlanta?</label>
+              
+                    <select id="atracao" name="atracao" required>
+               
+                        <option value="">Selecione uma atração</option>               
+                        <option value="aquario">Aquário de Georgia</option>              
+                        <option value="parque_piedmont">Parque Piedmont</option>              
+                        <option value="coca-cola">Museu da Coca-Cola</option>              
+                        <option value="zoo_atlanta">Zoo Atlanta</option>
+              
+                    </select><br><br>
+      
+                    <label for="ano_fundacao">Em que ano foi fundada Atlanta?</label>               
+                    <input type="number" id="ano_fundacao" name="ano_fundacao" min="1800" max="2023" step="1" placeholder="Ano" required><br><br>
+               
+                    <label>Você já visitou Atlanta?</label><br>               
+                    <input type="radio" id="visitou_sim" name="visitou" value="sim" required>
+               
+                    <label for="visitou_sim">Sim</label><br>              
+                    <input type="radio" id="visitou_nao" name="visitou" value="não">
+              
+                    <label for="visitou_nao">Não</label><br><br>
+              
+                    <label>Quais atrações você visitaria em Atlanta? (Escolha pelo menos duas)</label><br>               
+                    <input type="checkbox" id="aquario" name="atracoes[]" value="aquario">
+               
+                    <label for="aquario">Aquário de Georgia</label><br>               
+                    <input type="checkbox" id="coca_cola" name="atracoes[]" value="coca_cola">
+              
+                    <label for="coca_cola">Museu da Coca-Cola</label><br>              
+                    <input type="checkbox" id="parque_piedmont" name="atracoes[]" value="parque_piedmont">
+              
+                    <label for="parque_piedmont">Parque Piedmont</label><br>              
+                    <input type="checkbox" id="zoo" name="atracoes[]" value="zoo">
+
+                    <label for="zoo">Zoo Atlanta</label><br><br>
+
+                    <label for="data_visita">Quando você planeja visitar Atlanta?</label>              
+                    <input type="date" id="data_visita" name="data_visita" required><br><br>
+
+                    <label for="hora_visita">Que horas você gostaria de iniciar seu passeio?</label>               
+                    <input type="time" id="hora_visita" name="hora_visita" required><br><br>
+  
+                    <label for="interesse">Em uma escala de 1 a 10, qual o seu interesse em conhecer Atlanta?</label>              
+                    <input type="range" id="interesse" name="interesse" min="1" max="10" step="1" value="5"><br><br>
+
+                    <label for="descricao_atlanta">Se pudesse descrever Atlanta em uma frase, o que diria?</label><br>               
+                    <textarea id="descricao_atlanta" name="descricao_atlanta" rows="4" cols="50" placeholder="Atlanta é..." maxlength="200"></textarea><br><br>
+
+                    <label for="imagem">Adicione uma imagem de uma atração em Atlanta</label>
+                    <input type="image" id="imagem" src="https://www.example.com/imagem_atracao.png" alt="Atração em Atlanta"><br><br>
+           
+                </fieldset>
+           
+                <input type="reset" value="Limpar Formulário">           
+                <input type="submit" value="Submeter Quizz">
+           
+            </form>
+
+        </main>
+
+        <footer>
+            <p>DIW 2024</p>
+        </footer>
+
+    </body>
+
+</htlm>
