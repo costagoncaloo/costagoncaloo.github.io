@@ -1,8 +1,121 @@
-head{
-    background-color: black;
-    color: blueviolet;
+/* Estilo geral */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e; /* Fundo preto acinzentado */
+    color: #ffffff; /* Texto branco para boa legibilidade */
 }
-body{
-    background-color: blueviolet;
-    color: black;
+
+/* Cabeçalho */
+header {
+    background-color: #3d0066; /* Roxo escuro */
+    color: #e0e0e0; /* Cinza claro para contraste */
+    text-align: center;
+    padding: 40px 0;
+    flex-shrink: 0;
 }
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    letter-spacing: 2px; /* Espacamento entre letras para sofisticação */
+    text-transform: uppercase; /* Tudo em maiúsculas para destaque */
+}
+
+/* Navegação */
+nav {
+    background-color: #2a2a2a; /* Fundo cinza escuro */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between; /* Itens distribuídos igualmente */
+    align-items: center;
+}
+
+nav ul li {
+    flex: 1; /* Mesma largura para cada item */
+    text-align: center;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: #a020f0; /* Roxo vibrante para os links */
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    background-color: #333; /* Cor de fundo da caixa */
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s, color 0.3s; /* Transições suaves */
+}
+
+nav ul li a:hover {
+    background-color: #a020f0; /* Fundo roxo ao passar o mouse */
+    color: #ffffff; /* Texto branco ao passar o mouse */
+}
+
+/* Secção de Conteúdo */
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #121212; /* Cinza muito escuro */
+    width: 100%;
+}
+
+.conteudo {
+    text-align: center;
+    padding: 40px;
+    background-color: #2a2a2a; /* Cinza escuro */
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    border-radius: 10px; /* Bordas arredondadas para um visual suave */
+}
+
+.conteudo h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #a020f0; /* Roxo para os títulos */
+}
+
+.conteudo p {
+    font-size: 1.2em;
+    color: #e0e0e0; /* Texto cinza claro */
+}
+
+/* Rodapé */
+footer {
+    background-color: #3d0066; /* Roxo escuro, o mesmo do cabeçalho */
+    color: #e0e0e0; /* Texto cinza claro */
+    text-align: center;
+    padding: 20px 0;
+    flex-shrink: 0;
+    width: 100%;
+    font-size: 1em;
+}
+
+/* Ajustes para dispositivos menores */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .conteudo {
+        width: 90%;
+    }
+}
+
