@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<htlm lang=""pt">
+    <head>
+        <meta charset="UTF-8">
+        <title>Atlanta</title>
+
+    </head>
+    <body>
+        <header>
+            <h1>A minha cidade</h1>
+
+        </header>
+       
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="local.html">Localização</a>
+            <a href="multimedia.html">Multimédia</a>
+            <a href="info.html">Informação</a>
+            <a href="quizz.html">Quizz</a>
+            <a href="viagem.html">Viagem</a>
+        </nav>
+        <p> <a href="images/Atlanta.jpg"></a></p>
+        <main>
+
+            <h2>Registo de Intenção de Viagem para Atlanta</h2>
+    
+            <form method="get" action="https://postman-echo.com/get">
+      
+                       
+                <fieldset>
+           
+                    <legend>Dados Pessoais</legend>
+           
+                    <label for="nome">Nome:</label>          
+                    <input type="text" id="nome" name="nome" placeholder="Insira seu nome" required autofocus><br><br>
+         
+                    <label for="apelido">Apelido:</label>          
+                    <input type="text" id="apelido" name="apelido" placeholder="Insira seu apelido" required><br><br>
+         
+                    <label for="email">Email:</label>         
+                    <input type="email" id="email" name="email" placeholder="exemplo@email.com" autocomplete="on" required><br><br>
+       
+                </fieldset>
+       
+                      
+                <fieldset>
+
+                    <legend>Detalhes da Viagem</legend>
+         
+                             
+                    <label for="data_partida">Data de Partida:</label>         
+                    <input type="date" id="data_partida" name="data_partida" required><br><br>
+                                    
+                    <label for="data_regresso">Data de Regresso:</label>           
+                    <input type="date" id="data_regresso" name="data_regresso" required><br><br>
+                                       
+                    <label for="passageiros">Número de Passageiros:</label>          
+                    <input type="number" id="passageiros" name="passageiros" min="1" max="100" step="1" value="1" required><br><br>
+                                  
+                    <label for="transporte">Meio de Transporte Favorito:</label>
+                    <select id="transporte" name="transporte" required>
+          
+                        <option value="carro">Carro</option>           
+                        <option value="comboio">Comboio</option>            
+                        <option value="aviao">Avião</option>             
+                        <option value="autocarro">Autocarro</option>           
+                        <option value="outro">Outro</option>
+          
+                    </select><br><br>
+                 
+                    <label>Serviço Desejado:</label><br>          
+                    <input type="radio" id="basico" name="servico" value="básico" required>        
+                    <label for="basico">Básico</label><br>       
+                    <input type="radio" id="premium" name="servico" value="premium">        
+                    <label for="premium">Premium</label><br><br>
+             
+                    <label for="pedidos_especiais">Pedidos Especiais:</label><br>       
+                    <textarea id="pedidos_especiais" name="pedidos_especiais" rows="4" cols="50" placeholder="Escreva aqui seus pedidos especiais"></textarea><br><br>
+           
+                    <label for="valor">Valor esperado por pessoa e por dia (em USD):</label>     
+                    <input type="number" id="valor" name="valor" min="1" step="0.01" placeholder="Ex: 100.00" required><br><br>
+      
+                </fieldset>
+
+                <input type="reset" value="Limpar Formulário">
+                <input type="submit" value="Submeter Intenção de Viagem">
+                
+            </form>
+    
+        </main>
+
+        <footer>
+            <p>DIW 2024</p>
+        </footer>
+
+    </body>
+
+</htlm>
