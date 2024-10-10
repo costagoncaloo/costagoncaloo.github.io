@@ -12,7 +12,7 @@ html, body {
 
 /* Cabeçalho */
 header {
-    background-color: #3d0066; /* Roxo escuro */
+    background-color: #7534a1; /* Roxo escuro */
     color: #e0e0e0; /* Cinza claro para contraste */
     text-align: center;
     padding: 40px 0;
@@ -29,38 +29,37 @@ header h1 {
 /* Navegação */
 nav {
     background-color: #2a2a2a; /* Fundo cinza escuro */
-    padding: 10px 0;
+    padding: 5px ;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
     display: flex;
     justify-content: space-between; /* Itens distribuídos igualmente */
     align-items: center;
+    
 }
 
 nav ul li {
     flex: 1; /* Mesma largura para cada item */
     text-align: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 nav ul li a {
-    color: #a020f0; /* Roxo vibrante para os links */
+    color: whitesmoke; /* Roxo vibrante para os links */
     text-decoration: none;
     display: block;
-    padding: 10px 0;
-    background-color: #333; /* Cor de fundo da caixa */
-    border-radius: 5px;
+    padding: 5px 0;
+    background-color: #383737; /* Cor de fundo da caixa */
+    border-radius: 20px;
     font-size: 1.2em;
     transition: background-color 0.3s, color 0.3s; /* Transições suaves */
 }
-
 nav ul li a:hover {
-    background-color: #a020f0; /* Fundo roxo ao passar o mouse */
-    color: #ffffff; /* Texto branco ao passar o mouse */
+    background-color: #ddd;
+    color: black;
 }
 
 /* Secção de Conteúdo */
@@ -70,8 +69,8 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    background-color: #121212; /* Cinza muito escuro */
+    padding: 50px;
+    background-color: #7534a1; /* Roxo escuro */
     width: 100%;
 }
 
@@ -81,7 +80,7 @@ main {
     background-color: #2a2a2a; /* Cinza escuro */
     margin: 20px auto;
     width: 80%;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    box-shadow: 0px 4px 8px #3d0066(0, 0, 0, 0.3); /* Sombra suave */
     border-radius: 10px; /* Bordas arredondadas para um visual suave */
 }
 
@@ -93,12 +92,12 @@ main {
 
 .conteudo p {
     font-size: 1.2em;
-    color: #e0e0e0; /* Texto cinza claro */
+    color: #383737; /* Texto cinza claro */
 }
 
 /* Rodapé */
 footer {
-    background-color: #3d0066; /* Roxo escuro, o mesmo do cabeçalho */
+    background-color:   #383737  ; /* Roxo escuro, o mesmo do cabeçalho */
     color: #e0e0e0; /* Texto cinza claro */
     text-align: center;
     padding: 20px 0;
@@ -117,5 +116,20 @@ footer {
     .conteudo {
         width: 90%;
     }
+}
+/* Estilo dos títulos das seções Fotografia, Vídeo e Poema */
+#fotografias h3, #vídeo h3, #poema h3 {
+    color: #4CAF50;
+    font-size: 24px;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilo das imagens */
+main img {
+    margin-right: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
 }
 
