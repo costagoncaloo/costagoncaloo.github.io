@@ -67,7 +67,7 @@ main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
+
     justify-content: center;
     padding: 50px;
     background-color: #7534a1; /* Roxo escuro */
@@ -131,5 +131,22 @@ main img {
     margin-right: 10px;
     border: 2px solid #ccc;
     border-radius: 5px;
+}
+
+label {
+    font-size: small;
+    background-color: #868484; /* Substitua pelo código de cor desejado */
+    padding: 5px; /* Adiciona um pequeno espaçamento interno para melhorar a aparência */
+    border-radius: 5px; /* Opcional: para cantos arredondados */
+}
+
+
+input {
+    font-size: medium;
+}
+
+label, input {
+    display: block;
+    margin-bottom: 10px;
 }
 
