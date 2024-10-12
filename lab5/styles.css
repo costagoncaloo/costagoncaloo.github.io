@@ -70,7 +70,7 @@ main {
 
     justify-content: center;
     padding: 50px;
-    background-color: #7534a1; /* Roxo escuro */
+    background-color: #383737; /* Roxo escuro */
     width: 100%;
 }
 
@@ -96,7 +96,7 @@ main {
 }
 /* Seção com caixas maiores */
 .caixa-grande {
-    background-color: #ddd;
+    background-color: #7534a1;
     padding: 30px;
     margin: 20px 0;
     border-radius: 10px;
@@ -104,7 +104,7 @@ main {
 
 /* Seção com caixas menores */
 .caixa-pequena {
-    background-color: #ccc;
+    background-color: #7534a1;
     padding: 20px;
     margin: 20px 0;
     border-radius: 10px;
@@ -112,7 +112,7 @@ main {
 
 /* Rodapé */
 footer {
-    background-color:   #383737  ; /* Roxo escuro, o mesmo do cabeçalho */
+    background-color:   #7534a1  ; /* Roxo escuro, o mesmo do cabeçalho */
     color: #e0e0e0; /* Texto cinza claro */
     text-align: center;
     padding: 20px 0;
