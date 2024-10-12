@@ -1,0 +1,167 @@
+/* Estilo geral */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e; /* Fundo preto acinzentado */
+    color: #ffffff; /* Texto branco para boa legibilidade */
+}
+
+/* Cabeçalho */
+header {
+    background-color: #7534a1; /* Roxo escuro */
+    color: #e0e0e0; /* Cinza claro para contraste */
+    text-align: center;
+    padding: 40px 0;
+    flex-shrink: 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    letter-spacing: 2px; /* Espacamento entre letras para sofisticação */
+    text-transform: uppercase; /* Tudo em maiúsculas para destaque */
+}
+
+/* Navegação */
+nav {
+    background-color: #2a2a2a; /* Fundo cinza escuro */
+    padding: 5px ;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    justify-content: space-between; /* Itens distribuídos igualmente */
+    align-items: center;
+    
+}
+
+nav ul li {
+    flex: 1; /* Mesma largura para cada item */
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+nav ul li a {
+    color: whitesmoke; /* Roxo vibrante para os links */
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+    background-color: #383737; /* Cor de fundo da caixa */
+    border-radius: 20px;
+    font-size: 1.2em;
+    transition: background-color 0.3s, color 0.3s; /* Transições suaves */
+}
+nav ul li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Secção de Conteúdo */
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    padding: 50px;
+    background-color: #7534a1; /* Roxo escuro */
+    width: 100%;
+}
+
+.conteudo {
+    text-align: center;
+    padding: 40px;
+    background-color: #2a2a2a; /* Cinza escuro */
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0px 4px 8px #3d0066(0, 0, 0, 0.3); /* Sombra suave */
+    border-radius: 10px; /* Bordas arredondadas para um visual suave */
+}
+
+.conteudo h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #a020f0; /* Roxo para os títulos */
+}
+
+.conteudo p {
+    font-size: 1.2em;
+    color: #383737; /* Texto cinza claro */
+}
+/* Seção com caixas maiores */
+.caixa-grande {
+    background-color: #ddd;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+/* Seção com caixas menores */
+.caixa-pequena {
+    background-color: #ccc;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+/* Rodapé */
+footer {
+    background-color:   #383737  ; /* Roxo escuro, o mesmo do cabeçalho */
+    color: #e0e0e0; /* Texto cinza claro */
+    text-align: center;
+    padding: 20px 0;
+    flex-shrink: 0;
+    width: 100%;
+    font-size: 1em;
+}
+
+/* Ajustes para dispositivos menores */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .conteudo {
+        width: 90%;
+    }
+}
+/* Estilo dos títulos das seções Fotografia, Vídeo e Poema */
+#fotografias h3, #vídeo h3, #poema h3 {
+    color: #4CAF50;
+    font-size: 24px;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilo das imagens */
+main img {
+    margin-right: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+label {
+    font-size: small;
+    background-color: #868484; /* Substitua pelo código de cor desejado */
+    padding: 5px; /* Adiciona um pequeno espaçamento interno para melhorar a aparência */
+    border-radius: 5px; /* Opcional: para cantos arredondados */
+}
+
+
+input {
+    font-size: medium;
+}
+
+label, input {
+    display: block;
+    margin-bottom: 10px;
+}
+
