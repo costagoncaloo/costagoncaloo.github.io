@@ -1,19 +1,21 @@
 /* Estilo geral */
 html, body {
     height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     font-family: 'Arial', sans-serif;
-    background-color: #7534a1; /* Fundo preto acinzentado */
-    color: black /* Texto branco para boa legibilidade */
+    background-color: #a844eb; /* Fundo preto acinzentado */
+    color: black;
+    overflow-x: hidden;
 }
 
 
 /* Cabeçalho */
 header {
-    background-color: #2a2a2a; /* Roxo escuro */
+    background-color: #2a2a2a; /* cizento escuro */
     color: whitesmoke; /* whitesmoke para contraste */
     text-align: center;
     padding: 40px 0;
@@ -120,14 +122,13 @@ main fieldset{
 
 /* Rodapé */
 footer {
-    background-color:   #383737  ; /* Roxo escuro, o mesmo do cabeçalho */
-    color: whitesmoke; /* Texto cinza claro */
+    background-color: #2a2a2a;
+    color: white;
     text-align: center;
-    padding: 20px 0;
-    flex-shrink: 0;
+    padding: 10px 0;
+    position: fixed; /* Ou fixed se quiser que ele permaneça sempre no fundo */
+    bottom: 0;
     width: 100%;
-    font-size: 1em;
-}
 
 /* Ajustes para dispositivos menores */
 @media (max-width: 768px) {
@@ -189,3 +190,7 @@ label, input {
     
 }
 
+.pontos-interesses-section h2{
+    color: #7534a1;
+    
+}
