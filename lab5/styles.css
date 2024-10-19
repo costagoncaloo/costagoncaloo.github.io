@@ -1,4 +1,4 @@
-/* Estilo geral */
+/*----------------------------------------------------------------------------- Estilo Geral ----------------------------------------------------------------------*/
 html, body {
     height: 100%;
     width: 100%;
@@ -7,16 +7,15 @@ html, body {
     display: flex;
     flex-direction: column;
     font-family: 'Arial', sans-serif;
-    background-color: #a844eb; /* Fundo preto acinzentado */
+    background-color: #7534a1;
     color: black;
     overflow-x: hidden;
 }
 
-
-/* Cabeçalho */
+/* Cabeçalho Geral */
 header {
-    background-color: #2a2a2a; /* cizento escuro */
-    color: whitesmoke; /* whitesmoke para contraste */
+    background-color: #2a2a2a;
+    color: whitesmoke;
     text-align: center;
     padding: 40px 0;
     flex-shrink: 0;
@@ -25,110 +24,55 @@ header {
 header h1 {
     margin: 0;
     font-size: 3em;
-    letter-spacing: 2px; /* Espacamento entre letras para sofisticação */
-    text-transform: uppercase; /* Tudo em maiúsculas para destaque */
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-/* Navegação */
+/* Navegação Geral */
 nav {
-    background-color: #2a2a2a; /* Fundo cinza escuro */
-    padding: 5px ;
+    background-color: #2a2a2a;
+    padding: 5px;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     display: flex;
-    justify-content: space-between; /* Itens distribuídos igualmente */
+    justify-content: space-between;
     align-items: center;
-    
 }
 
 nav ul li {
-    flex: 1; /* Mesma largura para cada item */
+    flex: 1;
     text-align: center;
-    justify-content: space-evenly;
 }
 
 nav ul li a {
-    color: whitesmoke; /* whitesmoke para os links */
+    color: whitesmoke;
     text-decoration: none;
     display: block;
     padding: 5px 0;
-    background-color: #383737; /* Cor de fundo da caixa */
+    background-color: #383737;
     border-radius: 20px;
     font-size: 1.2em;
-    transition: background-color 0.3s, color 0.3s; /* Transições suaves */
+    transition: background-color 0.3s, color 0.3s;
 }
+
 nav ul li a:hover {
     background-color: #ddd;
     color: black;
 }
 
-/* Secção de Conteúdo */
-main {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-    padding: 50px;
-    background-color: #7534a1; /* Roxo escuro */
-    width: 100%;
-}
-
-.conteudo {
-    text-align: center;
-    padding: 40px;
-    background-color: whitesmoke; /* Cinza escuro */
-    margin: 20px auto;
-    width: 80%;
-    box-shadow: 0px 4px 8px #3d0066(0, 0, 0, 0.3); /* Sombra suave */
-    border-radius: 10px; /* Bordas arredondadas para um visual suave */
-}
-
-main h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: whitesmoke; /* Roxo para os títulos */
-}
-main h3{
-    color: whitesmoke;
-}
-
-.conteudo p {
-    font-size: 1.2em;
-    color: black; /* Texto cinza claro */
-}
-/* Seção com caixas maiores */
-.caixa-grande {
-    background-color: whitesmoke;
-    padding: 30px;
-    margin: 20px 0;
-    border-radius: 10px;
-}
-
-/* Seção com caixas menores */
-.caixa-pequena {
-    background-color: whitesmoke;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-}
-
-main fieldset{
-    background-color: whitesmoke;
-}
-
-/* Rodapé */
+/* Rodapé Geral */
 footer {
     background-color: #2a2a2a;
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed; /* Ou fixed se quiser que ele permaneça sempre no fundo */
+    position: fixed;
     bottom: 0;
     width: 100%;
+}
 
 /* Ajustes para dispositivos menores */
 @media (max-width: 768px) {
@@ -141,14 +85,6 @@ footer {
         width: 90%;
     }
 }
-/* Estilo dos títulos das seções Fotografia, Vídeo e Poema */
-#fotografias h3, #vídeo h3, #poema h3 {
-    color: #4CAF50;
-    font-size: 24px;
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
 
 /* Estilo das imagens */
 main img {
@@ -157,40 +93,226 @@ main img {
     border-radius: 5px;
 }
 
-label {
-    font-size: small;
-    background-color: #868484; /* Substitua pelo código de cor desejado */
-    padding: 5px; /* Adiciona um pequeno espaçamento interno para melhorar a aparência */
-    border-radius: 5px; /* Opcional: para cantos arredondados */
-}
-
-
-input {
-    font-size: medium;
-}
-
+/* Formatação Geral de Formulários */
 label, input {
     display: block;
     margin-bottom: 10px;
 }
 
-.pontosinteresse li:nth-child(odd) {
-    color: #7534a1;
-
-}
-.pontosinteresse ul li{
-    list-style-type: circle;
-}
-.pontosinteresse ol li {
-    list-style-type: upper-roman;
-}
-.multimedia main p a{
+label {
+    font-size: small;
+    background-color: #2b2b2b;
+    padding: 5px;
+    border-radius: 5px;
     color: whitesmoke;
-    font-size: 2;
-    
 }
 
-.pontos-interesses-section h2{
-    color: #7534a1;
-    
+input {
+    font-size: medium;
 }
+/*----------------------------------------------------------------------------Home page------------------------------------------------------------------------------- */
+
+.home-page main {
+    background-color: #5e307c;
+    padding: 50px;
+    color: whitesmoke;
+    font-size: large;
+}
+
+.home-page h2 {
+    color: whitesmoke;
+}
+
+
+
+/*----------------------------------------------------------------------------Pontos de Interesse page------------------------------------------------------------------------------- */
+
+.pontos-interesse-page main {
+    background-color: #7534a1; /* Fundo amarelo claro */
+    padding: 50px;
+}
+
+.pontos-interesse-page h2 {
+    color: whitesmoke; /* Título roxo */
+}
+
+.pontos-interesse-page  h3 {
+    color: purple; /* Subtítulo roxo */
+}
+
+.pontos-interesse-page .caixa-grande {
+    background-color: whitesmoke;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+.pontos-interesse-page .caixa-pequena {
+    background-color: whitesmoke;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.pontos-interesse-page .tabela-meses {
+    border-collapse: collapse;
+    width: 50%;
+
+}
+
+.pontos-interesse-page .tabela-meses td {
+    border: 1px solid #000; /* Adiciona bordas a todas as células */
+    padding: 8px; /* Espaçamento interno nas células */
+    text-align: center; /* Alinha o texto à esquerda */
+}
+
+.pontos-interesse-page .tabela-meses th {
+    background-color: #383737; /* Cor de fundo para o cabeçalho */
+    color: whitesmoke;
+
+}
+
+
+/*----------------------------------------------------------------------------Local page------------------------------------------------------------------------------- */
+
+.local-page main {
+    background-color: #7534a1; /* Amarelo claro */
+    padding: 50px;
+    color: whitesmoke;
+    font-size: large;
+}
+
+.local-page h2 {
+    color: whitesmoke;
+}
+
+
+
+
+/*----------------------------------------------------------------------------Multimedia page------------------------------------------------------------------------------- */
+
+.multimedia-page main {
+    background-color: #7534a1; /* Areia */
+    padding: 50px;
+    color: whitesmoke;
+}
+
+.multimedia-page h2 {
+    color: whitesmoke;
+}
+
+.multimedia-page h3{
+    color:whitesmoke;
+}
+
+/*----------------------------------------------------------------------------Info page------------------------------------------------------------------------------- */
+
+.info-page main {
+    background-color: #7534a1; /* Azul claro */
+    padding: 50px;
+}
+
+.info-page h2 {
+    color: whitesmoke;
+}
+.info-page main table {
+    color: black;
+}
+
+/*----------------------------------------------------------------------------Quizz page------------------------------------------------------------------------------- */
+
+.quizz-page main {
+    background-color: #5e307c; /* Vermelho tomate */
+    padding: 50px;
+}
+
+.quizz-page h2 {
+    color: whitesmoke;
+}
+
+
+/*----------------------------------------------------------------------------Viagem page------------------------------------------------------------------------------- */
+
+.viagem-page main {
+    background-color: #5e307c; /* Verde médio */
+    padding: 50px;
+   
+}
+
+.viagem-page h2 {
+    color: whitesmoke;
+}
+/*---------------------------------------------------------------------------Capitais page---------------------------------------------------------------------------------*/
+
+
+.capitais-page * {
+    font-family: sans-serif;
+    padding: 0; 
+    margin: 0;
+}
+
+.capitais-page header {
+    background: #2a2a2a; /* Cor de fundo do cabeçalho */
+    position: sticky; /* Fixa o cabeçalho na parte superior */
+    height: 10vh; /* Altura do cabeçalho */
+    top: 0; /* Fica fixo no topo */
+    display: flex;
+    justify-content: space-between; /* Alinha itens nas extremidades */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 10px 20px; /* Espaçamento lateral */
+}
+
+.capitais-page nav a {
+    padding: 20px; /* Espaço ao redor de cada link */
+    text-decoration: none; /* Remove sublinhado */
+    color: white; /* Cor padrão do texto dos links */
+    
+
+}
+
+.capitais-page nav a:hover {
+    background-color: #5e307c; /* Cor de fundo ao passar o mouse */
+}
+
+.capitais-page nav a:link {
+    color: white; /* Cor do link não visitado */
+}
+
+.capitais-page nav a:visited {
+    color: #ccc; /* Cor do link visitado */
+}
+
+.capitais-page nav a:active {
+    color: #ffcc00; /* Cor do link ativo */
+}
+.home-link {
+    background-color: #5e307c; /* Cor de fundo diferente para o último link */
+    color: white; /* Cor do texto do último link */
+    border-radius: 5px; /* Cantos arredondados para o último link */
+}
+
+.capitais-page main {
+    height: 90vh; /* Altura do conteúdo principal */
+    background: purple; /* Cor de fundo do conteúdo principal */
+    display: flex; /* Usar flex para centralizar o texto */
+    justify-content: center;
+    align-items: center;
+    font-size: 3em; /* Tamanho do texto */
+}
+
+.capitais-page article {
+    height: 100vh; /* Altura de cada artigo */
+    background: orange; /* Cor de fundo do primeiro artigo */
+    display: flex; /* Usar flex para centralizar o texto */
+    justify-content: center;
+    align-items: center;
+    font-size: 3em; /* Tamanho do texto */
+}
+
+.capitais-page article:last-child {
+    background: black; /* Cor de fundo do último artigo */
+    color: white; /* Cor do texto do último artigo */
+}
+
+
+
+
