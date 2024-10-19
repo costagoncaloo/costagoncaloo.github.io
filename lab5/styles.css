@@ -6,14 +6,15 @@ html, body {
     display: flex;
     flex-direction: column;
     font-family: 'Arial', sans-serif;
-    background-color: #1e1e1e; /* Fundo preto acinzentado */
-    color: #ffffff; /* Texto branco para boa legibilidade */
+    background-color: #7534a1; /* Fundo preto acinzentado */
+    color: black /* Texto branco para boa legibilidade */
 }
+
 
 /* Cabeçalho */
 header {
-    background-color: #7534a1; /* Roxo escuro */
-    color: #e0e0e0; /* Cinza claro para contraste */
+    background-color: #2a2a2a; /* Roxo escuro */
+    color: whitesmoke; /* whitesmoke para contraste */
     text-align: center;
     padding: 40px 0;
     flex-shrink: 0;
@@ -48,7 +49,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: whitesmoke; /* Roxo vibrante para os links */
+    color: whitesmoke; /* whitesmoke para os links */
     text-decoration: none;
     display: block;
     padding: 5px 0;
@@ -70,33 +71,36 @@ main {
 
     justify-content: center;
     padding: 50px;
-    background-color: #383737; /* Roxo escuro */
+    background-color: #7534a1; /* Roxo escuro */
     width: 100%;
 }
 
 .conteudo {
     text-align: center;
     padding: 40px;
-    background-color: #2a2a2a; /* Cinza escuro */
+    background-color: whitesmoke; /* Cinza escuro */
     margin: 20px auto;
     width: 80%;
     box-shadow: 0px 4px 8px #3d0066(0, 0, 0, 0.3); /* Sombra suave */
     border-radius: 10px; /* Bordas arredondadas para um visual suave */
 }
 
-.conteudo h2 {
+main h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #a020f0; /* Roxo para os títulos */
+    color: whitesmoke; /* Roxo para os títulos */
+}
+main h3{
+    color: whitesmoke;
 }
 
 .conteudo p {
     font-size: 1.2em;
-    color: #383737; /* Texto cinza claro */
+    color: black; /* Texto cinza claro */
 }
 /* Seção com caixas maiores */
 .caixa-grande {
-    background-color: #7534a1;
+    background-color: whitesmoke;
     padding: 30px;
     margin: 20px 0;
     border-radius: 10px;
@@ -104,16 +108,20 @@ main {
 
 /* Seção com caixas menores */
 .caixa-pequena {
-    background-color: #7534a1;
+    background-color: whitesmoke;
     padding: 20px;
     margin: 20px 0;
     border-radius: 10px;
 }
 
+main fieldset{
+    background-color: whitesmoke;
+}
+
 /* Rodapé */
 footer {
-    background-color:   #7534a1  ; /* Roxo escuro, o mesmo do cabeçalho */
-    color: #e0e0e0; /* Texto cinza claro */
+    background-color:   #383737  ; /* Roxo escuro, o mesmo do cabeçalho */
+    color: whitesmoke; /* Texto cinza claro */
     text-align: center;
     padding: 20px 0;
     flex-shrink: 0;
@@ -163,5 +171,21 @@ input {
 label, input {
     display: block;
     margin-bottom: 10px;
+}
+
+.pontosinteresse li:nth-child(odd) {
+    color: #7534a1;
+
+}
+.pontosinteresse ul li{
+    list-style-type: circle;
+}
+.pontosinteresse ol li {
+    list-style-type: upper-roman;
+}
+.multimedia main p a{
+    color: whitesmoke;
+    font-size: 2;
+    
 }
 
