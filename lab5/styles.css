@@ -10,7 +10,6 @@ html, body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    font-family: 'Arial', sans-serif;
     background-color: #b356f1;
     color: black;
     overflow-x: hidden;
@@ -21,7 +20,7 @@ header {
     background-color: #2a2a2a;
     color: whitesmoke;
     text-align: center;
-    padding: 40px 0;
+    padding: 25px 0;
     flex-shrink: 0;
 }
 
@@ -35,31 +34,37 @@ header h1 {
 /* Navegação Geral */
 nav {
     background-color: #2a2a2a;
-    padding: 5px;
+    padding: 10px;
 }
 
 nav ul {
     list-style-type: none;
-    margin: 0;
+    margin: 5px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+    justify-content: center;
 }
 
 nav ul li {
-    flex: 1;
     text-align: center;
+    flex: 1;
 }
 
 nav ul li a {
     color: whitesmoke;
     text-decoration: none;
-    display: block;
-    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
     background-color: #383737;
-    border-radius: 20px;
+    border-radius: 30px;
     font-size: 1.2em;
     transition: background-color 0.3s, color 0.3s;
+}
+nav ul li a i { /* Estilo para o ícone */
+    margin-right: 8px; /* Espaçamento entre o ícone e o texto */
 }
 
 nav ul li a:hover {
@@ -125,6 +130,18 @@ input {
 
 .home-page h2 {
     color: whitesmoke;
+    font-size: 2em;
+}
+.home-page p {
+    font-size: 1.2em;
+}
+.home-page main a {
+    text-decoration: none;
+    color: #000;
+}
+.home-page main a:hover {
+    color: blue;
+
 }
 
 
