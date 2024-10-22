@@ -1,0 +1,273 @@
+/*----------------------------------------------------------------------------- Estilo Geral ----------------------------------------------------------------------*/
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #b356f1;
+    color: black;
+    overflow-x: hidden;
+}
+
+/* Cabeçalho Geral */
+header {
+    background-color: #2a2a2a;
+    color: whitesmoke;
+    text-align: center;
+    padding: 25px 0;
+    flex-shrink: 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Navegação Geral */
+nav {
+    background-color: #2a2a2a;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li {
+    text-align: center;
+    flex: 1;
+}
+
+nav ul li a {
+    color: whitesmoke;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: #383737;
+    border-radius: 30px;
+    font-size: 1.2em;
+    transition: background-color 0.3s, color 0.3s;
+}
+nav ul li a i { /* Estilo para o ícone */
+    margin-right: 8px; /* Espaçamento entre o ícone e o texto */
+}
+
+nav ul li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Rodapé Geral */
+footer {
+    background-color: #2a2a2a;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Ajustes para dispositivos menores */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .conteudo {
+        width: 90%;
+    }
+}
+
+/* Estilo das imagens */
+main img {
+    margin-right: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Formatação Geral de Formulários */
+label, input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: small;
+    background-color: #2b2b2b;
+    padding: 5px;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+
+input {
+    font-size: medium;
+}
+/*----------------------------------------------------------------------------Home page------------------------------------------------------------------------------- */
+
+.home-page main {
+    background-color: #8d26d1;
+    padding: 50px;
+    color: whitesmoke;
+    font-size: large;
+}
+
+.home-page h2 {
+    color: whitesmoke;
+    font-size: 2em;
+}
+.home-page p {
+    font-size: 1.2em;
+}
+.home-page main a {
+    text-decoration: none;
+    color: #000;
+}
+.home-page main a:hover {
+    color: blue;
+
+}
+
+
+
+/*----------------------------------------------------------------------------Pontos de Interesse page------------------------------------------------------------------------------- */
+
+.pontos-interesse-page main {
+    background-color: #7534a1; /* Fundo amarelo claro */
+    padding: 50px;
+}
+
+.pontos-interesse-page h2 {
+    color: whitesmoke; /* Título roxo */
+}
+
+.pontos-interesse-page  h3 {
+    color: purple; /* Subtítulo roxo */
+}
+
+.pontos-interesse-page .caixa-grande {
+    background-color: whitesmoke;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+.pontos-interesse-page .caixa-pequena {
+    background-color: whitesmoke;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.pontos-interesse-page .tabela-meses {
+    border-collapse: collapse;
+    width: 50%;
+
+}
+
+.pontos-interesse-page .tabela-meses td {
+    border: 1px solid #000; /* Adiciona bordas a todas as células */
+    padding: 8px; /* Espaçamento interno nas células */
+    text-align: center; /* Alinha o texto à esquerda */
+}
+
+.pontos-interesse-page .tabela-meses th {
+    background-color: #383737; /* Cor de fundo para o cabeçalho */
+    color: whitesmoke;
+
+}
+
+
+/*----------------------------------------------------------------------------Local page------------------------------------------------------------------------------- */
+
+.local-page main {
+    background-color: #7534a1; /* Amarelo claro */
+    padding: 50px;
+    color: whitesmoke;
+    font-size: large;
+}
+
+.local-page h2 {
+    color: whitesmoke;
+}
+
+.local-page iframe {
+    cursor: zoom-in;
+}
+
+
+
+
+/*----------------------------------------------------------------------------Multimedia page------------------------------------------------------------------------------- */
+
+.multimedia-page main {
+    background-color: #7534a1; /* Areia */
+    padding: 50px;
+    color: whitesmoke;
+}
+
+.multimedia-page h2 {
+    color: whitesmoke;
+}
+
+.multimedia-page h3{
+    color:whitesmoke;
+}
+
+/*----------------------------------------------------------------------------Info page------------------------------------------------------------------------------- */
+
+.info-page main {
+    background-color: #7534a1; /* Azul claro */
+    padding: 50px;
+}
+
+.info-page h2 {
+    color: whitesmoke;
+}
+.info-page main table {
+    color: black;
+}
+
+/*----------------------------------------------------------------------------Quizz page------------------------------------------------------------------------------- */
+
+.quizz-page main {
+    background-color: #5e307c; /* Vermelho tomate */
+    padding: 50px;
+}
+
+.quizz-page h2 {
+    color: whitesmoke;
+}
+
+
+/*----------------------------------------------------------------------------Viagem page------------------------------------------------------------------------------- */
+
+.viagem-page main {
+    background-color: #5e307c; /* Verde médio */
+    padding: 50px;
+   
+}
+
+.viagem-page h2 {
+    color: whitesmoke;
+}
+
+
+
+
+
