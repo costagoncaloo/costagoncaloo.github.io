@@ -1,4 +1,8 @@
 /*----------------------------------------------------------------------------- Estilo Geral ----------------------------------------------------------------------*/
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 html, body {
     height: 100%;
     width: 100%;
@@ -7,7 +11,7 @@ html, body {
     display: flex;
     flex-direction: column;
     font-family: 'Arial', sans-serif;
-    background-color: #7534a1;
+    background-color: #b356f1;
     color: black;
     overflow-x: hidden;
 }
@@ -113,7 +117,7 @@ input {
 /*----------------------------------------------------------------------------Home page------------------------------------------------------------------------------- */
 
 .home-page main {
-    background-color: #5e307c;
+    background-color: #8d26d1;
     padding: 50px;
     color: whitesmoke;
     font-size: large;
@@ -185,6 +189,10 @@ input {
     color: whitesmoke;
 }
 
+.local-page iframe {
+    cursor: zoom-in;
+}
+
 
 
 
@@ -241,170 +249,7 @@ input {
 .viagem-page h2 {
     color: whitesmoke;
 }
-/*---------------------------------------------------------------------------Capitais page---------------------------------------------------------------------------------*/
 
-
-.capitais-page * {
-    font-family: sans-serif;
-    padding: 0; 
-    margin: 0;
-}
-
-.capitais-page header {
-    background: #2a2a2a; /* Cor de fundo do cabeçalho */
-    position: sticky; /* Fixa o cabeçalho na parte superior */
-    height: 10vh; /* Altura do cabeçalho */
-    top: 0; /* Fica fixo no topo */
-    display: flex;
-    justify-content: space-between; /* Alinha itens nas extremidades */
-    align-items: center; /* Centraliza verticalmente */
-    padding: 10px 20px; /* Espaçamento lateral */
-}
-
-.capitais-page nav a {
-    padding: 20px; /* Espaço ao redor de cada link */
-    text-decoration: none; /* Remove sublinhado */
-    color: white; /* Cor padrão do texto dos links */
-    
-
-}
-
-.capitais-page nav a:hover {
-    background-color: #5e307c; /* Cor de fundo ao passar o mouse */
-}
-
-.capitais-page nav a:link {
-    color: white; /* Cor do link não visitado */
-}
-
-.capitais-page nav a:visited {
-    color: #ccc; /* Cor do link visitado */
-}
-
-.capitais-page nav a:active {
-    color: #ffcc00; /* Cor do link ativo */
-}
-.capitais-page .home-link {
-    background-color: #5e307c; /* Cor de fundo diferente para o último link */
-    color: white; /* Cor do texto do último link */
-    border-radius: 5px; /* Cantos arredondados para o último link */
-}
-
-.capitais-page main {
-    height: 90vh; /* Altura do conteúdo principal */
-    background: purple; /* Cor de fundo do conteúdo principal */
-    display: flex; /* Usar flex para centralizar o texto */
-    justify-content: center;
-    align-items: center;
-    font-size: 3em; /* Tamanho do texto */
-}
-
-.capitais-page article {
-    width: 100vw; /* Largura total da viewport */
-    height: 50vh; /* Altura de 50% da viewport */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.capitais-page #poema {
-    background-color: lightblue; /* Cor de fundo do artigo Poema */
-}
-
-.capitais-page #paisagem {
-    width: 100vw; /* O artigo ocupa toda a largura da janela */
-    height: 100vh; /* A altura será baseada no conteúdo */
-}
-
-.imagem-container {
-    position: relative; /* Definimos position: relative para que o conteúdo posicionado dentro use essa referência */
-    width: 100vw; /* A imagem ocupa toda a largura da janela */
-    overflow: hidden; /* Esconder o excesso, se houver */
-}
-
-.imagem-container img {
-    width: 100vw; /* A imagem ocupa toda a largura da janela */
-    height: 100vh;
-   
-}
-
-.imagem-container .credit {
-    position: absolute; /* Posição absoluta dentro do container relativo */
-    bottom: 10px; /* Alinha 10px acima do fundo */
-    right: 10px; /* Alinha 10px à esquerda da borda direita */
-    color: white; /* Cor branca para o texto */
-    background-color: #000000ad;
-    padding: 5px 10px; /* Adiciona espaçamento ao redor do texto */
-    font-size: 2em; /* Tamanho do texto */
-    border-radius: 5px; /* Bordas arredondadas */
-}
-
-.imagem-container .credit a {
-    color: white; /* Cor do link */
-    text-decoration: none; /* Remove sublinhado do link */
-}
-
-.imagem-container .credit a:hover {
-    text-decoration: underline; /* Sublinhado ao passar o mouse */
-}
-
-.capitais-page #cidades {
-    background-color: orange; /* Cor de fundo para Cidades */
-    
-}
-/* Article cidades */
-.capitais-page #cidades {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 colunas com largura igual */
-    grid-template-rows: repeat(3, 1fr); /* 3 linhas com altura igual */
-    gap: 5px; /* Espaçamento entre os itens */
-    height: 100vh; /* Mantém a altura em 100% da viewport */
-    padding: 100px;
-    background-color: #5e307c;
-    align-items: center
-}
-
-.capitais-page #cidades section {
-    display: flex;
-    flex-direction: row; /* Disposição horizontal (lado a lado) */
-    align-items: center;
-    background-color: #fff;
-    width: 35vh;
-    border-radius: 10px;
-    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
-    padding: 0px;
-    overflow: hidden; /* Para garantir que o conteúdo não extrapole */
-}
-
-.capitais-page #cidades img {
-    width: 150px;
-    height: 100px;
-    object-fit: cover; /* Mantém a proporção da imagem */
-    border-radius: 0px;
-    margin-bottom: 0px;
-}
-
-.capitais-page #cidades div {
-    font-size: 1.2em;
-    background-color: #fff;
-    color: #000;
-    padding: 20px;
-    width: 10%;
-    text-align: center;
-    border-radius: 0px ;
-    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
-}
-
-.capitais-page #cidades section:hover div {
-    background-color: #eee; /* Muda a cor do fundo ao passar o mouse */
-    transition: background-color 0.3s;
-}
-
-.capitais-page article:last-child {
-    background: black; /* Cor de fundo do último artigo */
-    color: white; /* Cor do texto do último artigo */
-}
 
 
 

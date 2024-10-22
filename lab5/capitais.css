@@ -1,0 +1,216 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: sans-serif;
+    padding: 0; 
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #2a2a2a;
+}
+
+header {
+    background: #2a2a2a; /* Cor de fundo do cabeçalho */
+    position: sticky; /* Fixa o cabeçalho na parte superior */
+    height: 10vh; /* Altura do cabeçalho */
+    top: 0; /* Fica fixo no topo */
+    display: flex;
+    justify-content: space-between; /* Alinha itens nas extremidades */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 10px 20px; /* Espaçamento lateral */
+}
+header h1 {
+    color: whitesmoke;
+    margin: 0;
+    text-transform: uppercase;
+
+}
+nav a {
+    padding: 20px; /* Espaço ao redor de cada link */
+    text-decoration: none; /* Remove sublinhado */
+    color: white; /* Cor padrão do texto dos links */
+    
+
+}
+
+nav a:hover {
+    background-color: #5e307c; /* Cor de fundo ao passar o mouse */
+}
+nav a:link {
+    color: white; /* Cor do link não visitado */
+}
+
+nav a:visited {
+    color: #ccc; /* Cor do link visitado */
+}
+
+nav a:active {
+    color: #ffcc00; /* Cor do link ativo */
+}
+.home-link {
+    background-color: #5e307c; /* Cor de fundo diferente para o último link */
+    color: white; /* Cor do texto do último link */
+    border-radius: 5px; /* Cantos arredondados para o último link */
+}
+
+.poema {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #b356f1;
+}
+
+.poema-conteudo {
+    padding: 30px;
+    margin: 50px;
+    background-color: #8d26d1; /* Cor de fundo da caixa do poema */
+    color: whitesmoke;
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+    text-align: left; /* Centraliza o texto */
+    max-width: 600px; /* Largura máxima para não ficar muito grande */
+    font-size: 1.2em;
+
+.paisagem {
+   display: flex; 
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+   width: 100vw; /* Garante que a largura da paisagem seja 100% da viewport */
+   height: 100vh;
+}
+
+.imagem-container {
+    position: relative; /* Definimos position: relative para que o conteúdo posicionado dentro use essa referência */
+    width: 100vw; /* A imagem ocupa toda a largura da janela */
+    height: 100vh;
+    overflow: hidden
+}
+
+.imagem-container img {
+    width: 100vw; /* A imagem se adapta à largura do container */
+    height: 100vh; /* Mantém a proporção da imagem */
+    max-height: 100vh; /* Impede que a altura ultrapasse o tamanho da tela */
+
+}
+
+.imagem-container .credit {
+    position: absolute; /* Posição absoluta dentro do container relativo */
+    bottom: 10px; /* Alinha 10px acima do fundo */
+    right: 10px; /* Alinha 10px à esquerda da borda direita */
+    color: white; /* Cor branca para o texto */
+    background-color: #000000ad;
+    padding: 5px 10px; /* Adiciona espaçamento ao redor do texto */
+    font-size: 2em; /* Tamanho do texto */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.imagem-container .credit a {
+    color: white; /* Cor do link */
+    text-decoration: none; /* Remove sublinhado do link */
+}
+
+.imagem-container .credit a:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+}
+/* Article cidades */
+.cidades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b356f1;
+    padding-left: 200px;
+    padding-right: 200px;/* Distância interna em relação à borda da página */
+    padding-top: 100px; /* Reduza a distância do topo */
+    padding: 100px;
+}
+
+.cidade {
+    display: flex;
+    flex-direction: row; /* Organiza a imagem e o nome em coluna */
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden; /* Garante que os conteúdos fiquem dentro do limite */
+    width: 300px; /* Define uma largura fixa para as caixas */
+    margin: 30px;
+    transition: transform 0.3s ease;
+    
+}
+
+.cidade:hover {
+    transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
+}
+
+.cidade img {
+    width: 150px;
+    height: 120px; /* Tamanho fixo para as imagens */
+    object-fit: cover; /* Garante que a imagem cubra toda a área, sem distorção */
+    border-radius: 20px 20px 0 0; /* Bordas arredondadas apenas no topo */
+
+}
+.cidade p {
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: #fff;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    width: 100%;
+}
+
+.experimenta {
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.circulos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.circulo {
+    width: 150px; /* largura do círculo */
+    height: 150px; /* altura do círculo */
+    border-radius: 50%; /* transforma o quadrado em círculo */
+    background-color: #5e307c; /* cor de fundo do círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 10px;
+    position: relative; /* Para a posição do elemento filho */
+    overflow: hidden; /* Para esconder o texto */
+}
+.texto {
+    display: none; /* Inicialmente oculto */
+    position: absolute; /* Para centralizar o texto */
+    top: 50%; /* 50% da altura do círculo */
+    left: 50%; /* 50% da largura do círculo */
+    transform: translate(-50%, -50%); /* Centraliza o texto */
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.circulo:hover .texto {
+    display: block; /* Exibe o texto ao passar o mouse */
+}
+
+.icone {
+    font-size: 2em; /* Tamanho do ícone */
+    margin-bottom: 10px; /* Espaçamento abaixo do ícone */
+}
+
+
