@@ -40,28 +40,29 @@ nav {
 nav ul {
     list-style-type: none;
     margin: 5px;
+    padding: 0;
     display: flex;
+    flex-wrap: wrap; /* Permite que os itens se ajustem em múltiplas linhas */
     justify-content: space-evenly;
     align-items: center;
-    justify-content: center;
 }
 
 nav ul li {
-    text-align: center;
     flex: 1;
+    text-align: center;
+    margin: 5px;
 }
 
 nav ul li a {
     color: whitesmoke;
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0;
+    padding: 10px 15px;
     background-color: #383737;
     border-radius: 30px;
-    font-size: 1.2em;
     transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 nav ul li a i { /* Estilo para o ícone */
     margin-right: 8px; /* Espaçamento entre o ícone e o texto */
@@ -73,26 +74,15 @@ nav ul li a:hover {
 }
 
 /* Rodapé Geral */
+
 footer {
     background-color: #2a2a2a;
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
-}
-
-/* Ajustes para dispositivos menores */
-@media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .conteudo {
-        width: 90%;
-    }
 }
 
 /* Estilo das imagens */
@@ -118,7 +108,26 @@ label {
 
 input {
     font-size: medium;
+    padding: 5px;
+    width: 100%; /* Garante que o input ocupe a largura disponível */
+    box-sizing: border-box; /* Inclui o padding na largura */
 }
+aside {
+    background-color: #2a2a2a; /* Cor de fundo */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px; /* Bordas arredondadas */
+    width: 250px; /* Largura do aside */
+    float: right; /* Posicionamento à direita da página */
+}
+
+aside img {
+    flex-direction: row;
+    width: 100%; /* A imagem preenche a largura do aside */
+    border-radius: 8px; /* Bordas arredondadas na imagem */
+}
+
+
 /*----------------------------------------------------------------------------Home page------------------------------------------------------------------------------- */
 
 .home-page main {
@@ -143,7 +152,6 @@ input {
     color: blue;
 
 }
-
 
 
 /*----------------------------------------------------------------------------Pontos de Interesse page------------------------------------------------------------------------------- */
@@ -265,6 +273,40 @@ input {
 
 .viagem-page h2 {
     color: whitesmoke;
+}
+
+/*--------------------------------------------------------------------------------->Responsive-----------------------------------------------------------------------*/
+
+
+/* Para telas até 1024px de largura (tamanho de tablets e pequenos laptops) */
+@media (max-width: 1024px) {
+    #pInteresse, #restaurantes, #monumentos, #locaisNaoPerder, #melhorLocalFoto, 
+    #melhorAlturaVisitar, #curiosidades, #informacoes, #fotografiasEst, 
+    #video, #poema, #multimedia, #localizacaoEst {
+        width: 80%;
+        margin: 0 auto; /* Centraliza os elementos */
+    }
+}
+
+/* Para telas até 768px de largura (tamanho de tablets em modo retrato) */
+@media (max-width: 768px) {
+    #pInteresse, #restaurantes, #monumentos, #locaisNaoPerder, #melhorLocalFoto, 
+    #melhorAlturaVisitar, #curiosidades, #informacoes, #fotografiasEst, 
+    #video, #poema, #multimedia, #localizacaoEst {
+        width: 95%;
+        margin: 0 auto; /* Centraliza os elementos */
+    }
+}
+
+/* Para telas até 480px de largura (tamanho de smartphones) */
+@media (max-width: 480px) {
+    #pInteresse, #restaurantes, #monumentos, #locaisNaoPerder, #melhorLocalFoto, 
+    #melhorAlturaVisitar, #curiosidades, #informacoes, #fotografiasEst, 
+    #video, #poema, #multimedia, #localizacaoEst {
+        width: 100%; 
+        padding: 5px; 
+        margin: 0 auto; /* Centraliza os elementos */
+    }
 }
 
 
