@@ -1,3 +1,7 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
     padding: 0px; 
     margin: 0px;
@@ -48,13 +52,11 @@ main {
 div{
     padding: 20px;
     margin: 20px;
-    background-color: whitesmoke; /* Cor de fundo da caixa do poema */
+        background-color: whitesmoke; /* Cor de fundo da caixa do poema */
     color: black;
     border-radius: 15px; /* Bordas arredondadas */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
     text-align: left; /* Centraliza o texto */
-   
-
     font-size: 1.2em;
 }
 div h1{
@@ -73,6 +75,7 @@ div h1{
     grid-template-columns: 1fr 1fr 1fr ;
     align-items: center;
     margin: 10px; 
+    
      
 
 }
@@ -80,9 +83,11 @@ footer {
     background-color: #a9a9a9;
     color: black;
     text-align: center;
+    align-items: center;
     padding: 10px 0;
     position: relative;
     display: flex;
     bottom: 0;
     margin: 15px;
 }
+
