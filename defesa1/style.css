@@ -1,0 +1,88 @@
+body {
+    padding: 0px; 
+    margin: 0px;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+header {
+    background: #a9a9a9; /* Cor de fundo do cabeçalho */
+    position: sticky; /* Fixa o cabeçalho na parte superior */
+    height: 10vh; /* Altura do cabeçalho */
+    top: 0; /* Fica fixo no topo */
+    display: flex;
+    justify-content: space-between; /* Alinha itens nas extremidades */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 10px 20px; /* Espaçamento lateral */
+    margin: 15px;
+    
+
+}
+header h1 {
+    color: black;
+    margin: 0;
+    text-transform: uppercase;
+
+}
+nav {
+    background-color: #848484;
+    padding: 10px;
+}
+nav a {
+    padding: 20px; /* Espaço ao redor de cada link */
+    text-decoration: none; /* Remove sublinhado */
+    color: black; /* Cor padrão do texto dos links */
+    
+}
+
+nav a:hover {
+    background-color: #5e307c; /* Cor de fundo ao passar o mouse */
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: 15px;   
+}
+div{
+    padding: 20px;
+    margin: 20px;
+    background-color: whitesmoke; /* Cor de fundo da caixa do poema */
+    color: black;
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+    text-align: left; /* Centraliza o texto */
+   
+
+    font-size: 1.2em;
+}
+div h1{
+    color:black;
+}
+
+.div4  {
+    display: grid;
+    grid-template-columns: 1fr ;
+    align-items: center;
+    margin: 10px;  
+}
+
+.labs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    align-items: center;
+    margin: 10px; 
+     
+
+}
+footer {
+    background-color: #a9a9a9;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    display: flex;
+    bottom: 0;
+    margin: 15px;
+}
