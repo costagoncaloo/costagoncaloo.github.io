@@ -212,4 +212,125 @@ nav a:active {
     margin-bottom: 10px; /* Espaçamento abaixo do ícone */
 }
 
+/* Parallax Article Styles */
+.parallax {
+    position: relative;
+    height: 400px;
+    background-image: url('images/atlanta_night_aside.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Seção de vídeo em background */
+.video-section {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.video-background {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para melhor legibilidade */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.text-overlay h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.text-overlay p {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+
+/* Galeria de fotografias */
+.photo-gallery {
+    padding: 40px;
+    background-color: #8d26d1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Flexbox layout para as linhas */
+.gallery .row {
+    display: flex;
+    justify-content: space-around; /* Muda de space-between para space-around */
+    align-items: center;
+    margin-bottom: 30px; /* Aumenta a distância vertical entre as linhas */
+}
+
+/* Estilo para cada item da galeria */
+.photo-item {
+    width: 300px;
+    text-align: center;
+    margin: 0 20px; /* Adiciona mais espaço horizontal (margem) entre as imagens */
+}
+
+.photo-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Transformação em uma das fotos */
+.transform img {
+    transform: rotate(5deg); /* Aplica uma leve rotação */
+}
+
+/* Efeito hover em outra das fotos */
+.hover-effect img:hover {
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+    filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+
+
+
+
+
+
 
