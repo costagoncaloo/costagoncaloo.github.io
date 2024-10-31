@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos</title>
+    
 </head>
 <body>
     <h1>Eventos</h1>
@@ -12,25 +13,33 @@
     </div>
 
     <div>
-        <p>2. Pinta-me! <button onclick="changeColor('red')">Red</button>  <button onclick="changeColor('green')">Green</button> <button onclick="changeColor('blue')">Blue</button></p>
-    
+        <p>2. Pinta-me! 
+            <button onclick="changeColor('red')">Red</button>  
+            <button onclick="changeColor('green')">Green</button> 
+            <button onclick="changeColor('blue')">Blue</button>
+        </p>
     </div>
 
     <div>
-        <p>3. Experimenta escrever... <input type="text" id="inputText" oniput="showText()" placeholder="Escreve algo aqui"></p>
-        
+        <p>3. Experimenta escrever... 
+            <input type="text" id="inputText" oninput="showText()" placeholder="Escreve algo aqui">
+        </p>
         <p id="displayText"></p>
     </div>
 
     <div>
-        <p>4. Escolha uma cor em inglês: <input type="text" id="colorInput"> <button onclick="submitColor()">Submeter</button></p>
-
+        <p>4. Escolha uma cor em inglês: 
+            <input type="text" id="colorInput"> 
+            <button onsubmit="submitColor()">Submeter</button>
+        </p>
     </div>
 
     <div>
-        <p>5. <button onclick="count()">Conta!</button>  <span id="countDisplay">0</span></p>
-       
+        <p>5. <button onclick="count()">Conta!</button>  
+            <span id="countDisplay">0</span>
+        </p>
     </div>
+
 
     <!-- HTML já carregado! -->
     <script src="scripts/main.js"></script>
