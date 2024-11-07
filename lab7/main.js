@@ -1,6 +1,12 @@
+//1
+function passarPorCima() {
+
+}
+
+
 // 2
 function changeColor(color) { 
-    document.getElementById('colorBox').style.backgroundColor = color; 
+    document.getElementById('pinta-me').style.color = color; 
 } 
 
 // 3
@@ -20,9 +26,10 @@ function submitColor() {
 } 
 
 // 5
-let countValue = 0; // Mova a variável para fora da função
+let countValue = 0;
 
 function count() { 
     countValue++; 
     document.getElementById('countDisplay').innerText = countValue; 
 }
+
