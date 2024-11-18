@@ -33,3 +33,21 @@ function count() {
     document.getElementById('countDisplay').innerText = countValue; 
 }
 
+//Função paa imprimir nome e idade
+function submitNomeIdade() {
+    
+}
+
+// Função para o contador automático
+function contadorAutomatico() {
+    let contador = 0;
+    setInterval(() => {
+        contador += 1;
+        document.getElementById("contadorAutomatico").textContent = contador;
+    }, 1000); // Atualiza a cada 1 segundo
+}
+
+// Chama a função do contador automático quando a página é carregada
+contadorAutomatico();
+
+
