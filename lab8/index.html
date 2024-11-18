@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body id="colorBox">
+ <!-- Menu de navegação -->
+ 
+    <nav>
+    <a href="eventos.html">Gunna</a>
+    <a href="index.html">Eventos</a>
+    </nav>
+
+    <h1>Eventos</h1>
+    <div>
+        <p id="passar-por-cima">1. Passa por aqui!</p>
+    </div>
+
+    <div>
+        <p id="pinta-me">2. Pinta-me! 
+            <button onclick="changeColor('red')">Red</button>  
+            <button onclick="changeColor('green')">Green</button> 
+            <button onclick="changeColor('blue')">Blue</button>
+        </p>
+    </div>
+
+    <div>
+        <p>3. Experimenta escrever... 
+            <input type="text" id="inputText" oninput="showText()" placeholder="Escreve algo aqui">
+        </p>
+    </div>
+
+    <div>
+        <p>4. Escolha uma cor em inglês: 
+            <input type="text" id="colorInput"> 
+            <button onclick="submitColor()">Submeter</button> <!-- corrigido para onclick -->
+        </p>
+    </div>
+
+    <div>
+        <p>5. <button onclick="count()">Conta!</button>  
+            <span id="countDisplay">0</span>
+        </p>
+    </div>
+
+    <!-- HTML já carregado! -->
+    <script src="main.js"></script>
+</body>
+</html>
+

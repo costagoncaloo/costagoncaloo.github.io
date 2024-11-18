@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunna - Artista e Rapper</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 900px;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: #333;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        /* Menu de navegação */
+        nav {
+            width: 100%;
+            background-color: #444;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #ffd700;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+
+        nav a:hover {
+            color: #ff6347;
+        }
+
+        /* Título da página */
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+
+        /* Imagem e descrição */
+        .artist-image, #descricao {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+            display: none;
+        }
+        
+        /* Estilo específico para a imagem (visível inicialmente) */
+        .artist-image {
+            display: block;
+        }
+
+        /* Texto de descrição */
+        #descricao {
+            background-color: #444;
+            color: #dcdcdc;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        /* Discografia - Layout em 2 Linhas e 3 Colunas */
+        .discography {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .album {
+            padding: 15px;
+            background-color: #444;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 250px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .album h3 {
+            color: #ffd700;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .album p {
+            color: #dcdcdc;
+            font-size: 1.1em;
+            line-height: 1.4;
+        }
+
+        /* Rodapé */
+        footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        /* Responsividade para dispositivos móveis */
+        @media (max-width: 768px) {
+            .discography {
+                grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .discography {
+                grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="eventos.html">Gunna</a>
+        <a href="index.html">Eventos</a>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <div class="container">
+        <h1>Gunna</h1>
+        
+        <!-- Imagem e texto sobre Gunna -->
+        <img src="images/gunna_picture.jpg" alt="Imagem de Gunna" class="artist-image" id="artistImage">
+        
+        <div id="descricao">Gunna, cujo nome verdadeiro é Sergio Kitchens, é um rapper norte-americano conhecido pelo seu estilo melódico e pelas suas colaborações com artistas como Young Thug, Lil Baby e Travis Scott. Ele começou a ganhar notoriedade com as suas mixtapes e rapidamente se destacou na cena do hip-hop moderno. Em 2019, lançou o seu primeiro álbum de estúdio, <em>Drip or Drown 2</em>, seguido por <em>Wunna</em> em 2020, que conquistou o topo das tabelas musicais.</div>
+    
+        <!-- Discografia -->
+        <h2>Discografia</h2>
+        <div class="discography">
+            
+
+            <div class="album">
+                <h3>Drip or Drown 2 (2019)</h3>
+                <p>Este álbum marcou a ascensão de Gunna na cena hip-hop, com faixas que combinam o estilo melódico e a atmosfera do trap. Hits como "One Call" e "Speed It Up" são exemplos da sua habilidade para criar músicas cativantes.</p>
+            </div>
+
+            <div class="album">
+                <h3>Wunna (2020)</h3>
+                <p>Com este álbum, Gunna alcançou o primeiro lugar nas tabelas da Billboard. "Wunna" apresenta uma vibe descontraída, explorando temas de sucesso, luxo e autoconfiança. Faixas como "Dollaz On My Head" e "Skybox" foram muito bem recebidas pelos fãs e críticos.</p>
+            </div>
+
+            <div class="album">
+                <h3>DS4Ever (2022)</h3>
+                <p>DS4Ever é uma continuação da série Drip Season e mostra o amadurecimento artístico de Gunna. O álbum inclui colaborações de peso e produções elaboradas, destacando-se músicas como "Pushin P" (com Future) e "P Power" (com Drake).</p>
+            </div>
+
+            <!-- Novos álbuns adicionados -->
+            <div class="album">
+                <h3>Drip Season (2016)</h3>
+                <p>O projeto de estreia de Gunna, que ajudou a solidificar sua base de fãs no mundo do rap. A mixtape apresenta suas primeiras colaborações com artistas da YSL (Young Stoner Life Records), incluindo Young Thug.</p>
+            </div>
+
+            <div class="album">
+                <h3>Drip Season 3 (2018)</h3>
+                <p>A terceira edição da série "Drip Season" consolidou ainda mais a posição de Gunna no cenário do hip-hop. Com faixas como "Sold Out Dates" (com Lil Baby), o álbum marcou a sua ascensão no mainstream.</p>
+            </div>
+
+            <div class="album">
+                <h3>Wunna (Deluxe Edition) (2020)</h3>
+                <p>A edição deluxe de "Wunna" adiciona faixas extras e oferece uma versão expandida do álbum que foi um sucesso nas paradas. Ele inclui colaborações com artistas como Lil Uzi Vert e Travis Scott.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Feito com ♥ para fãs de Gunna</p>
+    </footer>
+
+    <!-- Script JavaScript para os eventos -->
+    <script src="eventosJava.js"></script>
+</body>
+</html>
+
+
