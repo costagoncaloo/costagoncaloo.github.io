@@ -19,12 +19,12 @@
     </div>
 
     <div>
-        <p id="pinta-me">2. Pinta-me! 
-            <button onclick="changeColor('red')">Red</button>  
-            <button onclick="changeColor('green')">Green</button> 
-            <button onclick="changeColor('blue')">Blue</button>
-        </p>
+        <p id="pinta-me">2. Pinta-me!</p>
+        <button data-color="red">Red</button>
+        <button data-color="green">Green</button>
+        <button data-color="blue">Blue</button>
     </div>
+    
 
     <div>
         <p>3. Experimenta escrever... 
@@ -33,11 +33,16 @@
     </div>
 
     <div>
-        <p>4. Escolha uma cor em inglês: 
-            <input type="text" id="colorInput"> 
-            <button onclick="submitColor()">Submeter</button> <!-- corrigido para onclick -->
-        </p>
+        <p>4. Escolha uma cor para o fundo:</p>
+        <select id="colorSelect">
+            <option value="white">White</option>
+            <option value="lightblue">Light Blue</option>
+            <option value="lightgreen">Light Green</option>
+            <option value="yellow">Yellow</option>
+            <option value="pink">Pink</option>
+        </select>
     </div>
+    
 
     <div>
         <p>5. <button onclick="count()">Conta!</button>  
@@ -46,9 +51,16 @@
     </div>
 
     <div>
-        <p>6. <input type="text" id="nome"> <input type="text" id="idade"> 
-            <button onclick="submitNomeIdade()">Submit</button>
+        <p>6. <input type="text" id="nome" placeholder="Nome"> 
+           <input type="text" id="idade" placeholder="Idade"> 
+           <button onclick="submitNomeIdade()">Submit</button>
+        </p>
+        <div id="greeting"></div>
+    </div>
 
+    <!-- Ponto 7 -->
+    <div>
+        <p>7. Automatic Counter: <span id="autoCounter">0</span></p>
     </div>
 
     <!-- HTML já carregado! -->

@@ -4,10 +4,15 @@ function passarPorCima() {
 }
 
 
-// 2
-function changeColor(color) { 
-    document.getElementById('pinta-me').style.color = color; 
-} 
+// Seleciona todos os botões com atributo data-color e adiciona um evento de clique
+document.querySelectorAll("button[data-color]").forEach((button) => {
+    button.addEventListener("click", () => {
+        const color = button.dataset.color; // Obtém a cor do atributo data-color
+        document.getElementById('pinta-me').style.color = color; // Altera a cor
+    });
+});
+
+
 
 // 3
 function showText() {
@@ -20,10 +25,11 @@ function showText() {
 }
 
 // 4
-function submitColor() { 
-    let color = document.getElementById('colorInput').value; 
-    document.getElementById('colorBox').style.backgroundColor = color; 
-} 
+// Detecta mudanças no select e altera a cor do fundo
+document.querySelector('#colorSelect').onchange = function () {
+    document.querySelector('body').style.backgroundColor = this.value;
+};
+
 
 // 5
 let countValue = 0;
@@ -33,21 +39,30 @@ function count() {
     document.getElementById('countDisplay').innerText = countValue; 
 }
 
-//Função paa imprimir nome e idade
 function submitNomeIdade() {
-    
+    let nome = document.getElementById("nome").value;
+    let idade = document.getElementById("idade").value;
+    let greetingDiv = document.getElementById("greeting");
+
+    if (nome && idade) {
+        greetingDiv.innerHTML += `<p>Olá, o ${nome} tem ${idade}!</p>`;
+    } else {
+        alert("Por favor, insira ambos Nome e Idade.");
+    }
 }
 
-// Função para o contador automático
-function contadorAutomatico() {
-    let contador = 0;
+// Ponto 7: Contador Automático
+let autoCount = 0;
+function startAutoCounter() {
     setInterval(() => {
-        contador += 1;
-        document.getElementById("contadorAutomatico").textContent = contador;
-    }, 1000); // Atualiza a cada 1 segundo
+        autoCount++;
+        document.getElementById("autoCounter").innerText = autoCount;
+    }, 1000);
 }
 
-// Chama a função do contador automático quando a página é carregada
-contadorAutomatico();
+// Iniciar contador automático ao carregar a página
+window.onload = startAutoCounter;
+
+
 
 
