@@ -49,16 +49,19 @@
             <span id="countDisplay">0</span>
         </p>
     </div>
+    
 
     <div>
-        <p>6. <input type="text" id="nome" placeholder="Nome"> 
-           <input type="text" id="idade" placeholder="Idade"> 
-           <button onclick="submitNomeIdade()">Submit</button>
+        <p>6. 
+            <form id="userForm" style="display: inline;">
+                <input type="text" id="nome" name="nome" placeholder="Nome" required style="margin-right: 5px;">
+                <input type="number" id="idade" name="idade" placeholder="Idade" required style="margin-right: 5px;">
+                <button type="submit">Submit</button>
+            </form>
         </p>
         <div id="greeting"></div>
     </div>
-
-    <!-- Ponto 7 -->
+    
     <div>
         <p>7. Automatic Counter: <span id="autoCounter">0</span></p>
     </div>

@@ -32,26 +32,40 @@ document.querySelector('#colorSelect').onchange = function () {
 
 
 // 5
-let countValue = 0;
+
+let countValue = localStorage.getItem('countValue') ? parseInt(localStorage.getItem('countValue'), 10) : 0;
+
+// Atualiza o contador na página ao carregar
+document.getElementById('countDisplay').innerText = countValue;
 
 function count() { 
+    // Incrementa o contador
     countValue++; 
+    
+    // Atualiza o elemento na página
     document.getElementById('countDisplay').innerText = countValue; 
+    
+    // Salva o valor no Local Storage
+    localStorage.setItem('countValue', countValue);
 }
 
-function submitNomeIdade() {
-    let nome = document.getElementById("nome").value;
-    let idade = document.getElementById("idade").value;
-    let greetingDiv = document.getElementById("greeting");
 
-    if (nome && idade) {
-        greetingDiv.innerHTML += `<p>Olá, o ${nome} tem ${idade}!</p>`;
-    } else {
-        alert("Por favor, insira ambos Nome e Idade.");
-    }
-}
+// 6
+document.querySelector('#userForm').onsubmit = (e) => {
+    // Evita o recarregamento da página
+    e.preventDefault();
 
-// Ponto 7: Contador Automático
+    // Obtém os valores dos inputs
+    const nome = document.querySelector('#nome').value;
+    const idade = document.querySelector('#idade').value;
+
+    // Exibe a mensagem no div de saída
+    const greetingDiv = document.querySelector('#greeting');
+    greetingDiv.innerHTML = `<p>Olá, o ${nome} tem ${idade}!</p>`;
+};
+
+
+// 7
 let autoCount = 0;
 function startAutoCounter() {
     setInterval(() => {
