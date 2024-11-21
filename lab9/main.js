@@ -51,15 +51,15 @@ function adicionarAoCesto(produto) {
 
 function removerDoCesto(index) {
     const cesto = JSON.parse(localStorage.getItem('cesto')) || [];
-    cesto.splice(index, 1); // Remove o item do cesto
-    localStorage.setItem('cesto', JSON.stringify(cesto)); // Atualiza o localStorage
-    renderizarCesto(); // Re-renderiza o cesto
+    cesto.splice(index, 1); 
+    localStorage.setItem('cesto', JSON.stringify(cesto)); 
+    renderizarCesto(); 
 }
 
 function renderizarCesto() {
     const cestoContainer = document.getElementById('produtos-cesto');
     const precoTotalContainer = document.getElementById('preco-total');
-    cestoContainer.innerHTML = ''; // Limpa o cesto antes de renderizar
+    cestoContainer.innerHTML = ''; 
     let precoTotal = 0;
 
     const cesto = JSON.parse(localStorage.getItem('cesto')) || [];
@@ -83,10 +83,10 @@ function renderizarCesto() {
 
         const botaoRemover = document.createElement('button');
         botaoRemover.textContent = "Remover";
-        botaoRemover.onclick = () => removerDoCesto(index); // Passa o índice para remover o produto correto
+        botaoRemover.onclick = () => removerDoCesto(index); 
 
-        artigoCesto.appendChild(imagem);
         artigoCesto.appendChild(titulo);
+        artigoCesto.appendChild(imagem);
         artigoCesto.appendChild(preco);
         artigoCesto.appendChild(botaoRemover);
 
