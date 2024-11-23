@@ -1,6 +1,11 @@
+let produtosOriginais = [];
+
 document.addEventListener("DOMContentLoaded", () => {
     const listaProdutos = document.getElementById('lista-produtos');
     const selectCategorias = document.getElementById('filtro-categorias');
+    const ordenarPreco = document.getElementById('ordenar-preco');
+
+    let produtosOriginais = []; 
 
     obterCategorias()
         .then(categorias => {
@@ -12,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     obterProdutos()
         .then(produtos => {
+            produtosOriginais = [...produtos];
             carregarProdutos(produtos);
         })
         .catch(err => {
@@ -24,18 +30,46 @@ document.addEventListener("DOMContentLoaded", () => {
         filtrarProdutosPorCategoria(categoriaSelecionada);
     });
 
+    ordenarPreco.addEventListener('change', () => {
+        const ordem = ordenarPreco.value; 
+        ordenarProdutosPorPreco(ordem);
+    });
+
     renderizarCesto();
 });
 
+function ordenarProdutosPorPreco(ordem) {
+    const listaProdutos = document.getElementById('lista-produtos');
+    let produtos;
+
+    if (ordem === "none") {
+        produtos = produtosOriginais;
+    } else {
+        produtos = JSON.parse(listaProdutos.dataset.produtos); 
+        produtos.sort((a, b) => {
+            if (ordem === 'asc') {
+                return a.price - b.price; 
+            } else if (ordem === 'desc') {
+                return b.price - a.price; 
+            }
+        });
+    }
+
+    carregarProdutos(produtos); 
+}
+
+
+
 async function obterCategorias() {
-    const url = "https://deisishop.pythonanywhere.com/categories/"; 
+    const url = "https://deisishop.pythonanywhere.com/categories/";
     try {
         const resposta = await fetch(url);
         if (!resposta.ok) {
             throw new Error(`Erro na requisição: ${resposta.status}`);
         }
         const categorias = await resposta.json();
-        return categorias;
+        console.log("Categorias obtidas da API:", categorias); 
+        return categorias.map(c => c.trim());  
     } catch (erro) {
         console.error("Erro ao obter categorias da API:", erro);
         throw erro;
@@ -44,7 +78,7 @@ async function obterCategorias() {
 
 function carregarCategorias(categorias) {
     const selectCategorias = document.getElementById('filtro-categorias');
-    selectCategorias.innerHTML = ''; 
+    selectCategorias.innerHTML = '';
 
     const opcaoTodas = document.createElement('option');
     opcaoTodas.value = ''; 
@@ -53,23 +87,28 @@ function carregarCategorias(categorias) {
 
     categorias.forEach(categoria => {
         const opcao = document.createElement('option');
-        opcao.value = categoria.trim(); 
+        opcao.value = categoria.trim();
         opcao.textContent = categoria.trim(); 
         selectCategorias.appendChild(opcao);
     });
 }
 
 
+
+
 async function obterProdutos() {
-    const url = "https://deisishop.pythonanywhere.com/products/"; 
+    const url = "https://deisishop.pythonanywhere.com/products/";
     try {
         const resposta = await fetch(url);
         if (!resposta.ok) {
             throw new Error(`Erro na requisição: ${resposta.status}`);
         }
         const produtos = await resposta.json();
-        console.log("Produtos obtidos da API:", produtos); 
-        return produtos;
+
+        return produtos.map(produto => ({
+            ...produto,
+            category: produto.category.trim() 
+        }));
     } catch (erro) {
         console.error("Erro ao obter os produtos da API:", erro);
         throw erro;
@@ -80,12 +119,16 @@ async function obterProdutos() {
 
 function carregarProdutos(produtos) {
     const listaProdutos = document.getElementById("lista-produtos");
-    listaProdutos.innerHTML = ''; 
+    listaProdutos.innerHTML = '';
 
     if (!produtos || produtos.length === 0) {
         console.log("Nenhum produto encontrado.");
         listaProdutos.innerHTML = "<p>Nenhum produto encontrado para esta categoria.</p>";
         return;
+    }
+
+    if (produtosOriginais.length === 0) {
+        produtosOriginais = produtos;
     }
 
     produtos.forEach(produto => {
@@ -94,33 +137,28 @@ function carregarProdutos(produtos) {
     });
 
     listaProdutos.dataset.produtos = JSON.stringify(produtos);
-    console.log("Produtos carregados:", produtos); 
+    console.log("Produtos carregados:", produtos);
 }
-
-
 
 function filtrarProdutosPorCategoria(categoriaSelecionada) {
     const listaProdutos = document.getElementById("lista-produtos");
-    const produtos = JSON.parse(listaProdutos.dataset.produtos); 
 
     console.log("Filtrando produtos por categoria:", categoriaSelecionada);
 
     let produtosFiltrados;
-    
-    if (categoriaSelecionada === "") {
-        produtosFiltrados = produtos;  
-    } else {
-        produtosFiltrados = produtos.filter(produto => {
-            const categoriaProduto = produto.category.trim().toLowerCase();  
-            const categoriaFiltro = categoriaSelecionada.trim().toLowerCase();  
 
-            console.log(`Comparando: ${categoriaProduto} com ${categoriaFiltro}`); 
-            return categoriaProduto === categoriaFiltro;
+    if (categoriaSelecionada === "") {
+        produtosFiltrados = produtosOriginais;
+    } else {
+        produtosFiltrados = produtosOriginais.filter(produto => {
+            console.log(`Comparando produto: ${produto.category} com filtro: ${categoriaSelecionada.trim()}`);
+            return produto.category === categoriaSelecionada.trim(); 
         });
     }
 
-    carregarProdutos(produtosFiltrados);
+    carregarProdutos(produtosFiltrados); 
 }
+
 
 
 function criarProduto(produto) {

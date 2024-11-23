@@ -19,11 +19,32 @@
    
     <main>
 
-        <section>
-            <label for="filtro-categorias">Filtrar por Categoria:</label>
-            <select id="filtro-categorias">
+        <section id="filtros">
+        
+            <section>
+                <label for="filtro-categorias">Filtrar</label>
+            
+                <select id="filtro-categorias">
                 <option value="">Todas as categorias</option>
             </select>
+            </section>
+
+            <section>
+                <label for="ordenar-preço">Ordenar</label>
+                <select id="ordenar-preco">
+                    <option value="none">Sem Ordenação</option>
+                    <option value="asc">Ordenar por preço: Crescente</option>
+                    <option value="desc">Ordenar por preço: Decrescente</option>
+                  </select>
+            </section>
+
+            <section>
+                <label for="pesquisar-produto">Procurar</label>
+                <input type="text" id="pesquisa-produto" placeholder="" />
+            </section>
+            
+
+           
         </section>
         
         <section id="produtos">
