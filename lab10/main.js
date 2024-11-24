@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const listaProdutos = document.getElementById('lista-produtos');
     const selectCategorias = document.getElementById('filtro-categorias');
     const ordenarPreco = document.getElementById('ordenar-preco');
-
-    let produtosOriginais = []; 
+    const inputPesquisa = document.getElementById('pesquisa-produto');
+    const botaoCompra = document.getElementById("botao-compra");
 
     obterCategorias()
         .then(categorias => {
@@ -35,6 +35,13 @@ document.addEventListener("DOMContentLoaded", () => {
         ordenarProdutosPorPreco(ordem);
     });
 
+    inputPesquisa.addEventListener('input', () => {
+        const pesquisa = inputPesquisa.value.trim().toLowerCase(); // Obtém o texto digitado e normaliza para lowercase
+        pesquisarProdutos(pesquisa);
+    });
+
+    botaoCompra.addEventListener("click", finalizarCompra);
+
     renderizarCesto();
 });
 
@@ -56,6 +63,19 @@ function ordenarProdutosPorPreco(ordem) {
     }
 
     carregarProdutos(produtos); 
+}
+function pesquisarProdutos(pesquisa) {
+    const listaProdutos = document.getElementById("lista-produtos");
+
+    if (!pesquisa) {
+        carregarProdutos(produtosOriginais);
+    } else {
+        const produtosFiltrados = produtosOriginais.filter(produto =>
+            produto.title.toLowerCase().includes(pesquisa) 
+        );
+
+        carregarProdutos(produtosFiltrados); 
+    }
 }
 
 
@@ -242,6 +262,62 @@ function renderizarCesto() {
     });
 
     precoTotalContainer.textContent = `Preço Total: €${precoTotal.toFixed(2)}`; 
+}
+
+async function finalizarCompra() {
+    const estudante = document.getElementById("estudante").checked;
+    const cupao = document.getElementById("cupao").value.trim();
+    const cesto = JSON.parse(localStorage.getItem('cesto')) || [];
+    const produtosIds = cesto.map(produto => produto.id);
+
+    if (produtosIds.length === 0) {
+        alert("O cesto está vazio. Adicione produtos antes de finalizar a compra.");
+        return;
+    }
+
+    const corpoPedido = {
+        products: produtosIds,
+        student: estudante,
+        coupon: cupao
+    };
+
+    try {
+        const resposta = await fetch("https://deisishop.pythonanywhere.com/buy", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(corpoPedido)
+        });
+
+        if (!resposta.ok) {
+            const erro = await resposta.json();
+            throw new Error(erro.error || "Erro ao processar a compra.");
+        }
+
+        const dados = await resposta.json();
+        mostrarResultadoCompra(dados);
+
+    } catch (erro) {
+        console.error("Erro na compra:", erro.message);
+        mostrarResultadoCompra({ error: erro.message });
+    }
+}
+
+function mostrarResultadoCompra(resultado) {
+    const resultadoCompra = document.getElementById("resultado-compra");
+    resultadoCompra.innerHTML = "";
+
+    if (resultado.error) {
+        resultadoCompra.innerHTML = `
+            <p style="color: red;">Erro: ${resultado.error}</p>
+        `;
+    } else {
+        resultadoCompra.innerHTML = `
+            <p><strong>Referência de Pagamento:</strong> ${resultado.reference}</p>
+            <p><strong>Total a Pagar:</strong> €${resultado.totalCost}</p>
+        `;
+    }
 }
 
 
