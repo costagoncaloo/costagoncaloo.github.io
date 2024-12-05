@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const ordenarPreco = document.getElementById('ordenar-preco');
     const inputPesquisa = document.getElementById('pesquisa-produto');
     const botaoCompra = document.getElementById("botao-compra");
+    const botaoRemoveTudo = document.getElementById("botao-remove-tudo");
+    const botaoMenosInfo = document.getElementById("botao-menos-info");
 
     obterCategorias()
         .then(categorias => {
@@ -40,10 +42,22 @@ document.addEventListener("DOMContentLoaded", () => {
         pesquisarProdutos(pesquisa);
     });
 
-    botaoCompra.addEventListener("click", finalizarCompra);
+    botaoCompra.addEventListener('click', finalizarCompra);
+
+    botaoRemoveTudo.addEventListener('click', removerTudoDoCesto);
+
+    botaoMenosInfo.addEventListener('click', menosInfo());
+    
+    
 
     renderizarCesto();
 });
+function menosInfo() {
+    const descricoes = document.querySelectorAll('descricao-produto');
+    descricoes.forEach(descricao =>
+        descricao.style.display = 'none' 
+    )
+}
 
 function ordenarProdutosPorPreco(ordem) {
     const listaProdutos = document.getElementById('lista-produtos');
@@ -71,7 +85,8 @@ function pesquisarProdutos(pesquisa) {
         carregarProdutos(produtosOriginais);
     } else {
         const produtosFiltrados = produtosOriginais.filter(produto =>
-            produto.title.toLowerCase().includes(pesquisa) 
+            produto.title.toLowerCase().includes(pesquisa) ||
+            produto.description.toLowerCase().includes(pesquisa)
         );
 
         carregarProdutos(produtosFiltrados); 
@@ -222,6 +237,10 @@ function removerDoCesto(index) {
     const cesto = JSON.parse(localStorage.getItem('cesto')) || [];
     cesto.splice(index, 1);
     localStorage.setItem('cesto', JSON.stringify(cesto)); 
+    renderizarCesto(); 
+}
+function removerTudoDoCesto() {
+    localStorage.removeItem('cesto');
     renderizarCesto(); 
 }
 
